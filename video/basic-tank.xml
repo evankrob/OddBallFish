@@ -1,0 +1,47 @@
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:jwplayer="http://developer.longtailvideo.com/trac/"> 
+  <channel> 
+    <title>MRSS Playlist Playlist</title> 
+	
+	
+<item> 
+      <title>Receiving Fish</title> 
+      <media:content url="/video/acclimating1.mp4" /> 
+      <media:thumbnail url="/video/thumbs/acclimating1.jpg" />
+      <description>Prepare your aquarium for new fish by doing a partial water change a day or two before your fish arrive</description>
+    </item> 
+	
+<item> 
+      <title>Acclimating in Water</title> 
+      <media:content url="/video/acclimating2.mp4" /> 
+      <media:thumbnail url="/video/thumbs/acclimating2.jpg" />
+      <description>Open the bag and cuff the top like a sock, which will allow the bag to float while staying open</description>
+      
+    </item>
+
+<item> 
+      <title>Starting and Maintaining a 20-gallon Planted Aquarium: Part A</title> 
+      <media:content url="/video/basic-tank-parta.mp4" /> 
+      <media:thumbnail url="/video/thumbs/basic-tank-1.jpg" />
+      <description>Parts of an Aquarium and Assembly</description>
+    </item> 
+
+	
+	<item> 
+      <title>Starting and Maintaining a 20-gallon Planted Aquarium: Part B</title> 
+      <media:content url="/video/basic-tank-partb.mp4" /> 
+      <media:thumbnail url="/video/thumbs/plants.jpg" />
+      <description>Planting and Stocking the Aquarium</description>
+    </item>
+	
+		<item> 
+      <title>Starting and Maintaining a 20-gallon Planted Aquarium: Part C</title> 
+      <media:content url="/video/basic-tank-partc.mp4" /> 
+      <media:thumbnail url="/video/thumbs/maintenance.jpg" />
+      <description>Aquarium Maintenance </description>
+    </item>
+	
+	
+	
+	
+  </channel> 
+</rss>

@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:jwplayer="http://developer.longtailvideo.com/trac/"> 
+  <channel> 
+    <title>MRSS Playlist Playlist</title> 
+
+<item> 
+      <title>Receiving Fish</title> 
+      <media:content url="/video/acclimating1.mp4" /> 
+      <media:thumbnail url="/video/thumbs/acclimating1.jpg" />
+      <description>Prepare your aquarium for new fish by doing a partial water change a day or two before your fish arrive...</description>
+    </item> 
+	
+<item> 
+      <title>Acclimating in Water</title> 
+      <media:content url="/video/acclimating2.mp4" /> 
+      <media:thumbnail url="/video/thumbs/acclimating2.jpg" />
+      <description>Open the bag and cuff the top like a sock, which will allow the bag to float while staying open...</description>
+      
+    </item>
+	 
+
+	
+	
+  </channel> 
+</rss>

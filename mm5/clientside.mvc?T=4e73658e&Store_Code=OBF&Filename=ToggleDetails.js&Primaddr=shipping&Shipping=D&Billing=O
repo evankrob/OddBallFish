@@ -1,0 +1,141 @@
+// Miva Merchant v5.x
+//
+// This file and the source codes contained herein are the property of
+// Miva Merchant, Inc.  Use of this file is restricted to the specific terms and
+// conditions in the License Agreement associated with this file.  Distribution
+// of this file or portions of this file for uses not covered by the License
+// Agreement is not allowed without a written agreement signed by an officer of
+// Miva Merchant, Inc.
+//
+// Copyright 1998-2013 Miva Merchant, Inc.  All rights reserved.
+// http://www.mivamerchant.com
+//
+// $Id: ToggleDetails.js 35234 2013-02-22 21:55:50Z rguisewite $
+//
+
+var ToggleDetails = {
+	primary_fields:null,
+	secondary_fields:null,
+	primary_tag:'',
+	secondary_tag:'',
+	trigger:null,
+	controls:null,
+	primary_inputs:[],
+	primary_selects:[],
+	secondary_inputs:[],
+	secondary_selects:[],
+	init:function ()
+	{
+		var self = this;
+
+		
+		this.primary_fields		= document.getElementById( 'shipping_fields' );
+		this.secondary_fields	= document.getElementById( 'billing_fields' );
+		this.trigger			= document.getElementById( 'billing_to_show' );
+		this.controls			= document.getElementById( 'billing_controls' );
+		this.primary_tag		= 'Ship';
+		this.secondary_tag		= 'Bill';
+		
+		
+		this.primary_inputs		= this.primary_fields.getElementsByTagName( 'input' );
+		this.primary_selects	= this.primary_fields.getElementsByTagName( 'select' );
+		this.secondary_inputs	= this.secondary_fields.getElementsByTagName( 'input' );
+		this.secondary_selects	= this.secondary_fields.getElementsByTagName( 'select' );
+
+		this.addEvent( this.trigger, 'click', function(){ self.go(); });
+
+		this.controls.style.visibility = 'visible';
+		
+		if ( this.trigger.checked )
+		{
+			this.addEvent( this.trigger.form, 'submit', ToggleDetails.copyFields );
+			this.secondary_fields.style.visibility = 'hidden';
+		}
+	},
+	go:function ()
+	{
+		if( this.trigger.checked )
+		{
+			this.addEvent( this.trigger.form, 'submit', ToggleDetails.copyFields );
+			this.secondary_fields.style.visibility = 'hidden';
+		}
+		else
+		{
+			this.removeEvent( this.trigger.form, 'submit', ToggleDetails.copyFields );
+			this.secondary_fields.style.visibility = 'visible';
+		}
+	},
+	copyFields:function ()
+	{
+		var primary_fields			= new Object();
+		var primary_select_fields	= new Object();
+		var name_swap;
+
+		for( i = 0; i < ToggleDetails.primary_inputs.length; i += 1 )
+		{
+			name_swap = ToggleDetails.primary_inputs[ i ].name.replace( ToggleDetails.primary_tag, ToggleDetails.secondary_tag );
+
+			primary_fields[ name_swap ] = new Object();
+
+			primary_fields[ name_swap ].value = ToggleDetails.primary_inputs[ i ].value;
+			
+			if( ToggleDetails.primary_inputs[ i ].checked )
+			{				
+				primary_fields[ name_swap ].checked = true;
+			}
+		}
+
+		for( i = 0; i < ToggleDetails.primary_selects.length; i += 1 )
+		{
+			name_swap = ToggleDetails.primary_selects[ i ].name.replace( ToggleDetails.primary_tag, ToggleDetails.secondary_tag );
+
+			primary_select_fields[ name_swap ] = new Object();
+
+			primary_select_fields[ name_swap ].selectedIndex = ToggleDetails.primary_selects[ i ].selectedIndex;
+		}
+
+		for( member in primary_fields )
+		{
+			if( ToggleDetails.trigger.form[ member ] )
+			{
+				ToggleDetails.trigger.form[ member ].value		= primary_fields[ member ].value;
+				ToggleDetails.trigger.form[ member ].checked	= primary_fields[ member ].checked;
+			}
+		}
+		
+		for( member in primary_select_fields )
+		{
+			ToggleDetails.trigger.form[ member ].selectedIndex	= primary_select_fields[ member ].selectedIndex;
+		}
+	},
+	addEvent:function( obj, eventType, fn  )
+	{
+		if( obj.addEventListener )
+		{
+			obj.addEventListener( eventType, fn, false );
+			return true;
+		}
+		else if( obj.attachEvent )
+		{
+			var r = obj.attachEvent( 'on' + eventType, fn );
+			return r;
+		}
+		else
+		{
+			return false;
+		}
+	},
+	removeEvent:function ( obj, type, fn )
+	{
+		if( obj.removeEventListener )
+		{
+			obj.removeEventListener( type, fn, false );
+		}
+		else if( obj.detachEvent )
+		{
+			obj.detachEvent( 'on' + type, fn );
+		}
+	}
+};
+
+ToggleDetails.init();

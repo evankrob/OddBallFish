@@ -1,0 +1,307 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+ font-family: Microgramma;
+ src: url("../fonts/MICROGBE.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: Microgramma;
+ src: url("../fonts/MICROGBE.TTF") /* TTF file for CSS3 browsers */
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-attachment: fixed;
+	background-color: #010303;
+	background-image: url(../images/bkgd.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #FFF;
+}
+a:link {
+	color: #FFC80B;
+}
+a:visited {
+	color: #FFC80B;
+}
+a:hover {
+	color: #D10808;
+}
+a:active {
+	color: #FFC80B;
+}
+
+h2,h3,h4 {
+	font-family:  Microgramma, Impact, Arial, Helvetic, sans-serif;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+h1 {
+	color: #53B6D3;
+	font-size: 25px;
+	text-shadow: 1px 1px 1px #000000;
+}
+h2 {
+	color: #FFC80B;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+h3 {
+	color: #D10808;
+	font-size: 16px
+}
+
+hr {
+	border: 1px solid #53B6D3;
+	margin: 25px auto;
+	width: 85%;
+}
+
+blockquote {
+	padding: 5px 20px 0 40px;
+	font-size: 16px;
+	font-style: italic;
+	background-image: url(../images/quote.png);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+	color: #BFE9F3;
+}
+
+
+/* Layout */
+
+#PageWrapper {
+	width: 1000px;
+	margin: 0 auto;
+	}
+	
+#Header {
+	height: 180px;
+	background: url(../images/header.png) no-repeat bottom;
+	}	
+	
+	
+#Logo {
+	width: 280px;
+	height: 220px;
+	float: left;
+	position: absolute;
+	margin: 12px 0 0 25px;
+	z-index: 1002;
+	}
+	
+	
+#Cart {
+	float: right;
+	width: 200px;
+	font-family: Microgramma, Impact, Arial, Helvetic, sans-serif;
+	text-transform: uppercase;
+	padding-top: 10px;
+	font-size: 12px;
+	z-index: 1002;
+	position: relative;
+
+}
+
+#Login {
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: none;
+}
+
+.carticon {
+	margin-left: -40px;
+	float: left;
+}
+
+#Tag {
+	position: absolute;
+	padding-left: 445px;
+	padding-right: 25px;
+	padding-top: 50px;
+	text-align: right;
+	z-index: 1001;
+}
+
+#Tag h1 {
+	color: #000;
+	margin: 0;
+	font-size: 16px;
+	
+}
+	
+#Nav {
+	width: 665px;
+	padding-left: 310px;
+	padding-top: 110px;
+	z-index: 1000;
+	position: relative;
+}
+
+#ContentWrapper {
+	background: url(../images/content.png);
+	min-height: 400px;
+	}
+	
+#Content {
+	margin: 0 25px;
+}
+	
+#LeftColumn {
+	float:left;
+	width: 250px;
+	margin-left: 25px;
+	margin-top: 70px;
+	padding: 15px;
+}
+
+#RightColumn {
+	width: 615px;
+	margin-left: 310px;
+	padding: 25px;
+}
+.img{
+	margin: 10px;
+	border: 1px solid #fff;
+}
+
+#SlideShow {
+	float: left;
+	width: 666px;
+	margin: -58px 0 0 -26px;
+	border-bottom: 1px solid #FFF;
+	position: relative;
+	z-index: 1;
+}
+	
+#Footer {
+	background: url(../images/footer.png) no-repeat top;
+	min-height: 100px;
+	padding: 40px 0 0 30px;
+	font-size: 12px;
+	}
+	
+#search{
+	padding:4px 6px 4px 0;
+	margin: 10px 0;
+}
+
+.Special {
+	width: 246px;
+	min-height: 100px;
+	background: url(../images/special.png) repeat-y left #1074ac;
+	border: 1px #fff solid;
+	margin: 10px 0;
+}
+
+
+
+
+
+.SpecialContent {
+	padding: 8px;
+}
+
+.SpecialContent img {
+	border: none;
+	padding-right: 6px;
+	float: left;
+}
+
+.Special h2 {
+	margin-top: 0;
+	font-size: 14px;
+}
+
+.coupon {
+	border: 3px dashed #D10808;
+	padding: 15px;
+	
+}
+
+.coupon h3 {
+	margin: 0;
+}
+
+
+#Features {
+	width: 666px;
+	margin: 0px 0 0 -26px;
+}
+	
+
+.Feature {
+	width: 33%;
+	
+	min-height: 100px;
+	border: 1px #fff solid;
+	background-color: #53B6D3;
+	padding: 10px;
+	color: #000;
+	vertical-align: top;
+}
+
+.Feature h2 {
+	margin-top: 0;
+	line-height: 15px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.clear {
+	clear:both;
+}
+
+
+.ImageRight {
+	float: right;
+	padding-left: 10px;
+	text-align: center;
+	
+}
+
+.RightColumn {
+	float: right;
+	padding: 0 10px;
+	margin-left: 10px;
+	border: 1px #fff solid;
+	background-color: #53B6D3;
+	color: #000;
+	
+}
+
+.RightColumn input,textarea {
+	width: 180px;
+}
+
+.rowblue {
+	background-color: #1074AC;
+}
+
+.rowalt {
+	background-color: #03141D;
+}
+.sale			{ font-weight:bold;color:#FFC80B; }
+
+.ThreeColumn {
+-moz-column-count: 3;
+        -moz-column-gap: 10px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 10px;
+        column-count: 3;
+		column-gap: 10px;
+}
+
+.TwoColumn {
+	float: left;
+	width: 50%;
+}
